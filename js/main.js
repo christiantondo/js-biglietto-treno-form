@@ -24,9 +24,9 @@ btnSubmitEl.addEventListener("click", function (event) {
    
     // Applico scontistica
     if (ageEl.value == "junior") {
-        discount = standardPrice * 0.20;
+        discount = (standardPrice * 0.20).toFixed(2);
     } else if (ageEl.value == "senior") {
-        discount = standardPrice * 0.40;
+        discount = (standardPrice * 0.40).toFixed(2);
     }
 
     let discountedTicket = (standardPrice - discount).toFixed(2);
@@ -38,7 +38,7 @@ btnSubmitEl.addEventListener("click", function (event) {
     // Recupero i dati e stampo in pagina
     document.getElementById("standard-price").textContent = `Tariffa standard: ${standardPrice} €`;
     document.getElementById("discount").textContent = `Sconto applicato: ${discount} €`;
-    document.getElementById("discounted-ticket").textContent = `Prezzo finale del biglietto${discountedTicket} €`;
+    document.getElementById("discounted-ticket").textContent = `Prezzo finale del biglietto: ${discountedTicket} €`;
 
     distanceEl.value = "";
     ageEl.value = "";
