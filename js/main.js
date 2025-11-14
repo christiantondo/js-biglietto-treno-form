@@ -31,11 +31,15 @@ btnSubmitEl.addEventListener("click", function (event) {
 
     let discountedTicket = (standardPrice - discount).toFixed(2);
     
-    // Stampo i dati calcolati
+    // Stampo i dati calcolati in console
     console.log("Standard price", standardPrice);
     console.log("Discounted price", discountedTicket);
 
+    // Recupero i dati e stampo in pagina
     document.getElementById("standard-price").textContent = `${standardPrice} €`;
     document.getElementById("discount").textContent = `Sconto applicato: ${discount} €`;
     document.getElementById("discounted-ticket").textContent = `${discountedTicket} €`;
+
+    distanceEl.value = "";
+    ageEl.value = "";
 })
