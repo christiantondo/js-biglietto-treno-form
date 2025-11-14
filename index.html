@@ -14,12 +14,17 @@
 
 <body class="bg-dark text-light">
 
-    <input type="number" name="distance" id="distance">
-    <select name="age" id="age">
-        <option value="junior">Junior (&lt;18)</option>
-        <option value="standard">Adult (&gt;18 & &lt;65)</option>
-        <option value="senior">Senior (&gt;65)</option>
-    </select>
+    <form action="">
+        <input type="number" name="distance" id="distance">
+        <select name="age" id="age">
+            <option value="junior">Junior (&lt;18)</option>
+            <option value="standard">Adult (&gt;18 & &lt;65)</option>
+            <option value="senior">Senior (&gt;65)</option>
+        </select>
+        <button id="btnSubmit">Calcola costo biglietto</button>
+    </form>
+
+    <p id="result"></p>
 
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
