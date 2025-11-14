@@ -6,4 +6,6 @@
 
 body {
     padding: 1rem;
+    background-image: url("/img/trainstation.jpeg");
+    background-size: cover;
 }
