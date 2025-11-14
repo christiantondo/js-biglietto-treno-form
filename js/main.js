@@ -2,11 +2,10 @@
 // El = Elemento del DOM
 const distanceEl = document.getElementById("distance");
 const ageEl = document.getElementById("age");
-const btnSubmitEl = document.getElementById("btnSubmit");
 const resultEl = document.getElementById("result");
 
 // Creo la funzione di calcolo scontistica
-btnSubmitEl.addEventListener("click", function (event) {
+document.getElementById("btnSubmit").addEventListener("click", function (event) {
 
     // Impedisco che la pagina venga refreshata ogni volta in quanto non ho un server con cui comunicare
     event.preventDefault()
