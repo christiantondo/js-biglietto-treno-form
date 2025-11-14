@@ -1,3 +1,5 @@
+/* Codice becchio biglietto del treno
+
 // Input:
 // Recupero: numero di chilometri ed età del passeggero
 const age = parseInt(prompt("Inserisci l'età del viaggiatore"));
@@ -36,4 +38,5 @@ datoStampatile = costoBigliettoFinale.toFixed(2);
 //Output:
 // Stampo il costo finale del biglietto arrotondato sia in alert che in pagina HTML
 document.getElementById("biglietto").innerHTML = `Il costo del biglietto è di ${datoStampatile} €`;
-alert(`Il costo del biglietto è di ${costoBigliettoFinale.toFixed(2)} €`);
+alert(`Il costo del biglietto è di ${costoBigliettoFinale.toFixed(2)} €`); */
+
