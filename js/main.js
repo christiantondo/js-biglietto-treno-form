@@ -40,3 +40,8 @@ datoStampatile = costoBigliettoFinale.toFixed(2);
 document.getElementById("biglietto").innerHTML = `Il costo del biglietto è di ${datoStampatile} €`;
 alert(`Il costo del biglietto è di ${costoBigliettoFinale.toFixed(2)} €`); */
 
+// El = Element of the DOM
+const distanceEl= document.getElementById("distance");
+const ageEl= document.getElementById("age");
+const btnSubmitEl= document.getElementById("btnSubmit");
+const resultEl= document.getElementById("result");
