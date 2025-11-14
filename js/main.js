@@ -40,8 +40,35 @@ datoStampatile = costoBigliettoFinale.toFixed(2);
 document.getElementById("biglietto").innerHTML = `Il costo del biglietto è di ${datoStampatile} €`;
 alert(`Il costo del biglietto è di ${costoBigliettoFinale.toFixed(2)} €`); */
 
-// El = Element of the DOM
-const distanceEl= document.getElementById("distance");
-const ageEl= document.getElementById("age");
-const btnSubmitEl= document.getElementById("btnSubmit");
-const resultEl= document.getElementById("result");
+// El = Elemento del DOM
+// Creo le variabili principali per comunicare con gli elementi del DOM
+const distanceEl = document.getElementById("distance");
+const ageEl = document.getElementById("age");
+const btnSubmitEl = document.getElementById("btnSubmit");
+const resultEl = document.getElementById("result");
+
+// Creo la funzione di calcolo scontistica
+btnSubmitEl.addEventListener("click", function (event) {
+
+    event.preventDefault()
+
+    const priceKm = 0.21;
+    const distanceKm = parseInt(distanceEl.value);
+
+    if (isNaN(distanceKm)) {
+        return;
+    }
+
+    const standardPrice = (distanceEl.value * priceKm).toFixed(2);
+    let discount = 0;
+   
+    if (ageEl.value == "junior") {
+        discount = standardPrice * 0.20;
+    } else if (ageEl.value == "senior") {
+        discount = standardPrice * 0.40;
+    }
+
+    let discountedTicket = (standardPrice - discount).toFixed(2);
+    console.log("Standard price", standardPrice);
+    console.log("Discounted price", discountedTicket);
+})
