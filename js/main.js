@@ -36,9 +36,9 @@ btnSubmitEl.addEventListener("click", function (event) {
     console.log("Discounted price", discountedTicket);
 
     // Recupero i dati e stampo in pagina
-    document.getElementById("standard-price").textContent = `${standardPrice} €`;
+    document.getElementById("standard-price").textContent = `Tariffa standard: ${standardPrice} €`;
     document.getElementById("discount").textContent = `Sconto applicato: ${discount} €`;
-    document.getElementById("discounted-ticket").textContent = `${discountedTicket} €`;
+    document.getElementById("discounted-ticket").textContent = `Prezzo finale del biglietto${discountedTicket} €`;
 
     distanceEl.value = "";
     ageEl.value = "";
