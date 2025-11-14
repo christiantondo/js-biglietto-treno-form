@@ -50,11 +50,13 @@ const resultEl = document.getElementById("result");
 // Creo la funzione di calcolo scontistica
 btnSubmitEl.addEventListener("click", function (event) {
 
+    // Impedisco che la pagina venga refreshata ogni volta in quanto non ho un server con cui comunicare
     event.preventDefault()
 
     const priceKm = 0.21;
     const distanceKm = parseInt(distanceEl.value);
 
+    // Controllo che l'input dell'utente sia valido
     if (isNaN(distanceKm)) {
         return;
     }
@@ -62,6 +64,7 @@ btnSubmitEl.addEventListener("click", function (event) {
     const standardPrice = (distanceEl.value * priceKm).toFixed(2);
     let discount = 0;
    
+    // Applico scontistica
     if (ageEl.value == "junior") {
         discount = standardPrice * 0.20;
     } else if (ageEl.value == "senior") {
@@ -69,6 +72,8 @@ btnSubmitEl.addEventListener("click", function (event) {
     }
 
     let discountedTicket = (standardPrice - discount).toFixed(2);
+    
+    // Stampo i dati calcolati
     console.log("Standard price", standardPrice);
     console.log("Discounted price", discountedTicket);
 })
