@@ -12,9 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-dark text-light">
-
-
+<body class="bg-dark">
     <div class="card d-flex text-center container">
         <div class="card-header">
             Compra il tuo biglietto
@@ -24,8 +22,8 @@
             <p class="card-text">In base alla tua fascia di età verrà applicata una scontistica</p>
 
             <form class="p-2" action="">
-                <input type="number" name="distance" id="distance" placeholder="Numero Km">
-                <select name="age" id="age">
+                <input class="" type="number" name="distance" id="distance" placeholder="Numero Km">
+                <select class="p-1" name="age" id="age">
                     <option value="" selected disabled>Seleziona fascia di età</option>
                     <option value="junior">Junior (&lt;18)</option>
                     <option value="standard">Adult (&gt;18 & &lt;65)</option>
@@ -33,13 +31,13 @@
                 </select>
                 <br>
             </form>
-            <button class="btn btn-primary" id="btnSubmit">Calcola costo biglietto</button>
+
+            <button class="btn btn-primary my-2" id="btnSubmit">Calcola costo biglietto</button>
             <p id="standard-price"></p>
             <p id="discount"></p>
             <h3 id="discounted-ticket"></h3>
         </div>
     </div>
-
 
 
     <script src="./js/main.js"></script>
