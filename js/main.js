@@ -34,4 +34,8 @@ btnSubmitEl.addEventListener("click", function (event) {
     // Stampo i dati calcolati
     console.log("Standard price", standardPrice);
     console.log("Discounted price", discountedTicket);
+
+    document.getElementById("standard-price").textContent = `${standardPrice} €`;
+    document.getElementById("discount").textContent = `Sconto applicato: ${discount} €`;
+    document.getElementById("discounted-ticket").textContent = `${discountedTicket} €`;
 })
