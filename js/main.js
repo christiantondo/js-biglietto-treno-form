@@ -12,7 +12,7 @@ document.getElementById("btnSubmit").addEventListener("click", function (event) 
 
     const priceKm = 0.21;
     const distanceKm = parseInt(distanceEl.value);
-
+    
     // Controllo che l'input dell'utente sia valido
     if (isNaN(distanceKm)) {
         return;

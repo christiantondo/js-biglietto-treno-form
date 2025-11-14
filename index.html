@@ -14,21 +14,33 @@
 
 <body class="bg-dark text-light">
 
-    <h1>Inserisci i chilometri che vuoi percorrere e seleziona la tua fascia d'età</h1>
-    <form action="">
-        <input type="number" name="distance" id="distance">
-        <select name="age" id="age">
-            <option value="" selected disabled>Seleziona fascia di età</option>
-            <option value="junior">Junior (&lt;18)</option>
-            <option value="standard">Adult (&gt;18 & &lt;65)</option>
-            <option value="senior">Senior (&gt;65)</option>
-        </select>
-        <button id="btnSubmit">Calcola costo biglietto</button>
-    </form>
 
-    <p id="standard-price"></p>
-    <p id="discount"></p>
-    <p id="discounted-ticket"></p>
+    <div class="card d-flex text-center container">
+        <div class="card-header">
+            Compra il tuo biglietto
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">Inserisci i Km che vuoi percorrere</h3>
+            <p class="card-text">In base alla tua fascia di età verrà applicata una scontistica</p>
+
+            <form class="p-2" action="">
+                <input type="number" name="distance" id="distance" placeholder="Numero Km">
+                <select name="age" id="age">
+                    <option value="" selected disabled>Seleziona fascia di età</option>
+                    <option value="junior">Junior (&lt;18)</option>
+                    <option value="standard">Adult (&gt;18 & &lt;65)</option>
+                    <option value="senior">Senior (&gt;65)</option>
+                </select>
+                <br>
+            </form>
+            <button class="btn btn-primary" id="btnSubmit">Calcola costo biglietto</button>
+            <p classid="standard-price"></p>
+            <p id="discount"></p>
+            <h3 id="discounted-ticket"></h3>
+        </div>
+    </div>
+
+
 
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
