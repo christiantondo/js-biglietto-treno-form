@@ -17,6 +17,7 @@ document.getElementById("btnSubmit").addEventListener("click", function (event) 
     if (isNaN(distanceKm)) {
         return;
     }
+    // Se non valido la funzione termina qui
 
     const standardPrice = (distanceEl.value * priceKm).toFixed(2);
     let discount = 0;
