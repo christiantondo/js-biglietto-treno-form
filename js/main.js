@@ -25,8 +25,10 @@ document.getElementById("btnSubmit").addEventListener("click", function (event) 
     // Applico scontistica
     if (ageEl.value == "junior") {
         discount = (standardPrice * 0.20).toFixed(2);
+        console.log("L'utente appartiene alla fascia junior, applico lo sconto");
     } else if (ageEl.value == "senior") {
         discount = (standardPrice * 0.40).toFixed(2);
+        console.log("L'utente appartiene alla fascia senior, applico lo sconto");
     }
 
     let discountedTicket = (standardPrice - discount).toFixed(2);
